@@ -1,0 +1,1036 @@
+================================================================================
+PDD (拼多多) v8.5.0 - Static Analysis Findings
+================================================================================
+
+Total files scanned: 24827
+Files with matches: 4554
+Total matches: 31246
+
+
+============================================================
+CATEGORY: ACCESSIBILITY
+Matches: 552
+============================================================
+
+  File: androidx\appcompat\app\AppCompatDelegateImpl.java
+  Match: AccessibilityEvent
+  Context: pCompatDelegateImpl.this.f2573n.setVisibility(0);             AppCompatDelegateImpl.this.f2573n.sendAccessibilityEvent(32);             if (AppCompatDelegateImpl.this.f2573n.getParent() instanceof Vie
+
+  File: androidx\appcompat\widget\ActionBarContextView.java
+  Match: AccessibilityEvent
+  Context: onEvent; import android.view.View; import android.view.ViewGroup; import android.view.accessibility.AccessibilityEvent; import android.widget.LinearLayout; import android.widget.TextView; import andro
+
+  File: androidx\appcompat\widget\ActionMenuView.java
+  Match: AccessibilityEvent
+  Context: enuItem; import android.view.View; import android.view.ViewGroup; import android.view.accessibility.AccessibilityEvent; import androidx.appcompat.view.menu.ActionMenuItemView; import androidx.appcompa
+
+  File: androidx\appcompat\widget\ActivityChooserView.java
+  Match: AccessibilityNodeInfo
+  Context: ort android.view.ViewGroup; import android.view.ViewTreeObserver; import android.view.accessibility.AccessibilityNodeInfo; import android.widget.AdapterView; import android.widget.BaseAdapter; import 
+
+  File: androidx\appcompat\widget\AppCompatButton.java
+  Match: AccessibilityEvent
+  Context: import android.util.AttributeSet; import android.view.ActionMode; import android.view.accessibility.AccessibilityEvent; import android.view.accessibility.AccessibilityNodeInfo; import android.widget.B
+
+  File: androidx\appcompat\widget\LinearLayoutCompat.java
+  Match: AccessibilityEvent
+  Context: buteSet; import android.view.View; import android.view.ViewGroup; import android.view.accessibility.AccessibilityEvent; import android.view.accessibility.AccessibilityNodeInfo; import h4.g; import h4.
+
+  File: androidx\appcompat\widget\ScrollingTabContainerView.java
+  Match: AccessibilityEvent
+  Context: w; import android.view.ViewGroup; import android.view.ViewParent; import android.view.accessibility.AccessibilityEvent; import android.view.accessibility.AccessibilityNodeInfo; import android.view.ani
+
+  File: androidx\appcompat\widget\SwitchCompat.java
+  Match: AccessibilityEvent
+  Context: import android.view.View; import android.view.ViewConfiguration; import android.view.accessibility.AccessibilityEvent; import android.view.accessibility.AccessibilityNodeInfo; import android.widget.Co
+
+  File: androidx\core\content\ContextCompat.java
+  Match: accessibilityservice
+  Context: package androidx.core.content;  import android.accessibilityservice.AccessibilityService; import android.accounts.AccountManager; import android.app.ActivityManager; import android.app.AlarmManager; i
+
+  File: androidx\core\widget\NestedScrollView.java
+  Match: AccessibilityEvent
+  Context: n; import android.view.ViewGroup; import android.view.ViewParent; import android.view.accessibility.AccessibilityEvent; import android.view.animation.AnimationUtils; import android.widget.EdgeEffect; 
+
+  ... (and 542 more matches)
+
+
+============================================================
+CATEGORY: ALARM_KEEPALIVE
+Matches: 1216
+============================================================
+
+  File: a1\b.java
+  Match: schedule
+  Context: ;         }          @Override // android.graphics.drawable.Drawable.Callback         public void unscheduleDrawable(Drawable drawable, Runnable runnable) {             if (h4.g.f(drawable, runnable, 
+
+  File: a1\g.java
+  Match: schedule
+  Context: idateSelf();         }     }      @Override // android.graphics.drawable.Drawable     public void unscheduleSelf(Runnable runnable) {         if (h4.g.e(runnable, this, 10184).f63858a) {             r
+
+  File: a52\d.java
+  Match: schedule
+  Context: package a52;  import com.xunmeng.pinduoduo.push_plugin_init.interfaces.adpter.scheduler.IPluginUnShowTracker; import com.xunmeng.pinduoduo.push_plugin_init.local_notification.LocalNotificationResource
+
+  File: a52\e.java
+  Match: schedule
+  Context: package a52;  import com.xunmeng.pinduoduo.push_plugin_init.interfaces.adpter.scheduler.PluginReadyImprResult; import yr1.h;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes5.de
+
+  File: a6\k.java
+  Match: schedule
+  Context: .f634e.invalidateSelf();     }      @Override // android.graphics.drawable.Drawable     public void scheduleSelf(Runnable runnable, long j14) {         super.scheduleSelf(runnable, j14);         this.
+
+  File: af0\a.java
+  Match: Schedule
+  Context: package af0;  import com.xunmeng.pinduoduo.app_push_unify.interfaces.IBizResourceScheduler;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes3.dex */ public abstract /* synthetic
+
+  File: ag\b.java
+  Match: Schedule
+  Context: java.util.ArrayList; import java.util.Iterator; import java.util.List; import java.util.concurrent.ScheduledFuture; import java.util.concurrent.TimeUnit; import java.util.concurrent.atomic.AtomicBoole
+
+  File: androidx\appcompat\widget\ActionBarContainer.java
+  Match: schedule
+  Context: his.f2852e;         if (drawable2 != null) {             drawable2.setCallback(null);             unscheduleDrawable(this.f2852e);         }         this.f2852e = drawable;         if (drawable != nul
+
+  File: androidx\core\app\JobIntentService.java
+  Match: JobScheduler
+  Context: rvice; import android.app.job.JobInfo; import android.app.job.JobParameters; import android.app.job.JobScheduler; import android.app.job.JobServiceEngine; import android.app.job.JobWorkItem; import an
+
+  File: androidx\core\content\ContextCompat.java
+  Match: AlarmManager
+  Context: ice; import android.accounts.AccountManager; import android.app.ActivityManager; import android.app.AlarmManager; import android.app.AppOpsManager; import android.app.DownloadManager; import android.a
+
+  ... (and 1206 more matches)
+
+
+============================================================
+CATEGORY: AUDIO_VIDEO
+Matches: 518
+============================================================
+
+  File: androidx\core\content\ContextCompat.java
+  Match: MediaProjection
+  Context: mport android.media.AudioManager; import android.media.MediaRouter; import android.media.projection.MediaProjectionManager; import android.media.session.MediaSessionManager; import android.media.tv.Tv
+
+  File: b12\e.java
+  Match: AudioRecord
+  Context: ion.needRequestPermissionPmm(activity, "com.xunmeng.pinduoduo.pisces.util.PermissionUtils", "requestAudioRecordPermission", "android.permission.RECORD_AUDIO", "android.permission.CAMERA")) {          
+
+  File: com\pdd\audio\audioenginesdk\recorder\SystemAudioCapture.java
+  Match: AudioRecord
+  Context: package com.pdd.audio.audioenginesdk.recorder;  import android.media.AudioRecord; import com.xunmeng.core.log.L; import tb2.a;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes.d
+
+  File: com\pdd\audio\audioenginesdk\service\JSAudioRecorder.java
+  Match: AudioRecord
+  Context: t1.b;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes.dex */ public class JSAudioRecorder extends c {     private BaseFragment fragment = null;     public ICommonCallBack recor
+
+  File: com\xunmeng\mediaengine\rtc\impl\ImRtcImpl.java
+  Match: audioRecord
+  Context: = true;     private static ImRtcImpl s_instance_;     private sj.e.b audioFrameListener_;     qj.d audioRecorderSilentJudge_;     public Context context_;     private qj.j eventHandler_;     private L
+
+  File: com\xunmeng\pdd_av_foundation\androidcamera\IRecorder.java
+  Match: AudioRecord
+  Context: foundation.androidcamera.config.VideoConfig; import com.xunmeng.pdd_av_foundation.androidcamera.sdk.AudioRecordMode; import java.util.HashMap; import tl.y;  /* JADX INFO: compiled from: Pdd */ /* JADX
+
+  File: com\xunmeng\pdd_av_foundation\androidcamera\sdk\AudioRecordMode.java
+  Match: AudioRecord
+  Context: ra.sdk;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes2.dex */ public enum AudioRecordMode {     SYSTEM_RECORD_MODE,     EFFECT_RECORD_MODE,     AUDIO_FILE_PLAY_RECORD_MODE,  
+
+  File: com\xunmeng\pdd_av_foundation\pddlivescene\components\live\audiocomemnt\LiveSceneAudioCommentComponent.java
+  Match: AudioRecord
+  Context: f20724s;      /* JADX INFO: renamed from: t, reason: collision with root package name */     public AudioRecordStatus f20725t;      /* JADX INFO: renamed from: u, reason: collision with root package n
+
+  File: com\xunmeng\pdd_av_foundation\pddvideocapturekit\component\capturetool\shoot\CaptureShootComponent.java
+  Match: AudioRecord
+  Context: foundation.androidcamera.config.VideoConfig; import com.xunmeng.pdd_av_foundation.androidcamera.sdk.AudioRecordMode; import com.xunmeng.pdd_av_foundation.pdd_media_core.PDDMCBase.Size; import com.xunm
+
+  File: com\xunmeng\pdd_av_foundation\pdd_live_push\audio_manager\e.java
+  Match: AudioRecord
+  Context: package com.xunmeng.pdd_av_foundation.pdd_live_push.audio_manager;  import android.media.AudioRecord; import com.xunmeng.core.log.L;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: cla
+
+  ... (and 508 more matches)
+
+
+============================================================
+CATEGORY: BINDER_MANIPULATION
+Matches: 482
+============================================================
+
+  File: android\content\pm\IPackageStatsObserver.java
+  Match: Transact
+  Context: IPackageStatsObserver");         }          @Override // android.os.Binder         public boolean onTransact(int i14, Parcel parcel, Parcel parcel2, int i15) throws RemoteException {             if (i
+
+  File: android\support\v4\app\INotificationSideChannel.java
+  Match: transact
+  Context: onSideChannel");                     parcelObtain.writeString(str);                     this.f2328a.transact(3, parcelObtain, null, 1);                 } finally {                     parcelObtain.rec
+
+  File: android\support\v4\media\MediaMetadataCompat.java
+  Match: Parcel.obtain
+  Context: }         if (obj == null) {             return null;         }         Parcel parcelObtain = Parcel.obtain();         l.a.b(obj, parcelObtain, 0);         parcelObtain.setDataPosition(0);         Med
+
+  File: android\support\v4\media\session\IMediaControllerCallback.java
+  Match: transact
+  Context: parcelObtain.writeInt(0);                     }                     this.f2386a.transact(1, parcelObtain, null, 1);                 } finally {                     parcelObtain.recycle();             
+
+  File: android\support\v4\media\session\IMediaSession.java
+  Match: readStrongBinder
+  Context: n.IMediaSession");                     registerCallbackListener(IMediaControllerCallback.a.i(parcel.readStrongBinder()));                     parcel2.writeNoException();                     return tru
+
+  File: android\support\v4\os\IResultReceiver.java
+  Match: transact
+  Context: parcelObtain.writeInt(0);                     }                     this.f2470a.transact(1, parcelObtain, null, 1);                 } finally {                     parcelObtain.recycle();             
+
+  File: android\support\v4\os\ResultReceiver.java
+  Match: readStrongBinder
+  Context: this.f2471a = false;         this.f2472b = null;         this.f2473c = IResultReceiver.a.i(parcel.readStrongBinder());     }      public void s(int i14, Bundle bundle) {         if (g.f(Integer.valueO
+
+  File: androidx\media\MediaBrowserServiceCompat.java
+  Match: Parcel.obtain
+  Context: mediaItem = (MediaBrowserCompat.MediaItem) it.next();                         Parcel parcelObtain = Parcel.obtain();                         mediaItem.writeToParcel(parcelObtain, 0);                  
+
+  File: ap\a.java
+  Match: Parcel.obtain
+  Context: a.class.getClassLoader();      public static Object a(byte[] bArr) {         Parcel parcelObtain = Parcel.obtain();         parcelObtain.unmarshall(bArr, 0, bArr.length);         parcelObtain.setDataP
+
+  File: c30\a.java
+  Match: Parcel.obtain
+  Context: rr2);         if (bArrF == null) {             return null;         }         Parcel parcelObtain = Parcel.obtain();         parcelObtain.unmarshall(bArrF, 0, bArrF.length);         parcelObtain.setDa
+
+  ... (and 472 more matches)
+
+
+============================================================
+CATEGORY: CLIPBOARD
+Matches: 247
+============================================================
+
+  File: androidx\core\content\ContextCompat.java
+  Match: ClipboardManager
+  Context: droid.appwidget.AppWidgetManager; import android.bluetooth.BluetoothManager; import android.content.ClipboardManager; import android.content.Context; import android.content.Intent; import android.cont
+
+  File: com\xunmeng\pinduoduo\adapter_sdk\utils\BotClipboardApi.java
+  Match: ClipboardManager
+  Context: s;  import android.content.ClipData; import android.content.ClipDescription; import android.content.ClipboardManager; import qa2.f;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: clas
+
+  File: com\xunmeng\pinduoduo\adapter_sdk\utils\BotClipboardHelper.java
+  Match: ClipData
+  Context: package com.xunmeng.pinduoduo.adapter_sdk.utils;  import android.content.ClipData; import t21.f;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes2.dex */ public class BotClipboa
+
+  File: com\xunmeng\pinduoduo\apm\init\d0.java
+  Match: ClipData
+  Context: init;  import android.app.Application; import android.app.PddActivityThread; import android.content.ClipData; import android.content.Context; import android.content.pm.PackageInfo; import android.cont
+
+  File: com\xunmeng\pinduoduo\app_album\album\MultiImageSelectorActivity.java
+  Match: ClipData
+  Context: om.xunmeng.pinduoduo.app_album.album;  import android.app.PddActivityThread; import android.content.ClipData; import android.content.DialogInterface; import android.content.Intent; import android.cont
+
+  File: com\xunmeng\pinduoduo\share\m0.java
+  Match: ClipData
+  Context: package com.xunmeng.pinduoduo.share;  import android.content.ClipData; import android.content.ComponentName; import android.content.Context; import android.content.Intent; import android.graphics.Bitm
+
+  File: dc2\a.java
+  Match: getPrimaryClip
+  Context: hSet.add("setPrimaryClip");         this.f52560a.add("clearPrimaryClip");         this.f52560a.add("getPrimaryClip");         this.f52560a.add("getPrimaryClipDescription");         this.f52560a.add("h
+
+  File: hb2\c.java
+  Match: ClipData
+  Context: package hb2;  import android.content.ClipData; import android.content.Context; import android.content.Intent; import android.content.pm.PackageManager; import android.net.Uri; import android.os.Build;
+
+  File: mj2\m.java
+  Match: ClipData
+  Context: package mj2;  import android.content.ClipData; import android.view.View; import android.widget.PopupWindow; import android.widget.TextView; import androidx.fragment.app.Fragment; import bk2.c1; import
+
+  File: qa2\f.java
+  Match: ClipboardManager
+  Context: 2;  import android.content.ClipData; import android.content.ClipDescription; import android.content.ClipboardManager; import com.xunmeng.pinduoduo.home.base.entity.HomeTopTab;  /* JADX INFO: compiled 
+
+  ... (and 237 more matches)
+
+
+============================================================
+CATEGORY: COMMAND_EXECUTION
+Matches: 30
+============================================================
+
+  File: com\alipay\sdk\sys\b.java
+  Match: ProcessBuilder
+  Context: Process processStart;         String line = com.pushsdk.a.f14484d;         try {             ProcessBuilder processBuilder = new ProcessBuilder(strArr);             processBuilder.redirectErrorStream(
+
+  File: com\xunmeng\pinduoduo\adapter_sdk\utils\BotPddExecutor.java
+  Match: ProcessBuilder
+  Context: wa2.a;  /* JADX INFO: loaded from: classes2.dex */ public class BotPddExecutor {     public static ProcessBuilder createProcessBuilder(String str, String str2) {         return a.c(str, str2);     }  
+
+  File: com\xunmeng\pinduoduo\apm\init\d0.java
+  Match: ProcessBuilder
+  Context: /* synthetic */ String H() {         return i60.k.a(this);     }      @Override // i60.l     public ProcessBuilder I(List list, String str) {         return wa2.a.e(list, str);     }      @Override //
+
+  File: i60\l.java
+  Match: ProcessBuilder
+  Context: String E();      boolean F();      Process G(String[] strArr, String str);      String H();      ProcessBuilder I(List list, String str);      boolean J();      String K();      String L(boolean z14);
+
+  File: s23\a.java
+  Match: ProcessBuilder
+  Context: nstruction-set=" + str3);                 arrayList.add("--compiler-filter=speed");                 ProcessBuilder processBuilder = new ProcessBuilder(arrayList);                 processBuilder.redire
+
+  File: wa2\a.java
+  Match: ProcessBuilder
+  Context: ppend(file != null ? file.getPath() : " ");         return sb3.toString();     }      public static ProcessBuilder c(String str, String str2) {         h hVarM = g.m(str, str2, 18520);         if (hVa
+
+
+============================================================
+CATEGORY: CONTENT_PROVIDER_LEAK
+Matches: 1892
+============================================================
+
+  File: a90\a.java
+  Match: ContentProvider
+  Context: package a90;  import android.content.ContentProviderClient; import android.content.res.TypedArray; import android.drm.DrmManagerClient; import android.media.MediaDrm; import android.media.MediaMetadat
+
+  File: ae0\b.java
+  Match: query
+  Context: ayParam.getValueFromExtra("payTicket");         cVar.f7821i = h.d(payParam.getValueFromExtra("cycle_query"));         String valueFromExtra = payParam.getValueFromExtra("poll_scene");         String p
+
+  File: af2\a.java
+  Match: query
+  Context: ring();     }      public static String f() {         return h() + "/api/elmar/certification/living/query";     }      public static String g(String str, String str2, String str3, String str4) {      
+
+  File: ag0\j.java
+  Match: query
+  Context: g_card");             JsonObject jsonObject = new JsonObject();             jsonObject.addProperty("query", kVar.b());             jsonObject.addProperty("display_type", (Number) 3);             jsonO
+
+  File: ag0\k.java
+  Match: query
+  Context: /* JADX INFO: renamed from: a, reason: collision with root package name */     @SerializedName("query")     private String f1384a;      /* JADX INFO: renamed from: b, reason: collision with root packa
+
+  File: ak1\b1.java
+  Match: Query
+  Context: uilderBuildUpon = u40.r.e(detailToOrderUrl).buildUpon();             if (!TextUtils.isEmpty(uriE.getQuery())) {                 for (String str2 : uriE.getQueryParameterNames()) {                     
+
+  File: ak1\i1.java
+  Match: Query
+  Context: uilderBuildUpon.appendQueryParameter(str, str2);         } else {             builderBuildUpon.clearQuery();             for (String str3 : queryParameterNames) {                 if (!TextUtils.isEmpt
+
+  File: an1\s.java
+  Match: query
+  Context: ;         }         u.j(map2, map);         HttpCall.get().method("GET").url(ev1.b.d("/api/caterham/query/fenlei_gyl_group", map2)).header(ev1.c.f()).callback(new a(eVar, i14, strS, tVar, zD)).build()
+
+  File: android\arch\lifecycle\ProcessLifecycleOwnerInitializer.java
+  Match: ContentProvider
+  Context: package android.arch.lifecycle;  import android.content.ContentProvider; import android.content.ContentValues; import android.database.Cursor; import android.net.Uri; import com.pushsdk.a;  /* JADX IN
+
+  File: android\support\v4\media\session\MediaSessionCompat.java
+  Match: QUERY
+  Context: c.this.onPrepareFromSearch(bundle.getString("android.support.v4.media.session.action.ARGUMENT_QUERY"), bundle2);                     return;                 }                 if (str.equals("android.s
+
+  ... (and 1882 more matches)
+
+
+============================================================
+CATEGORY: CRYPTO
+Matches: 9006
+============================================================
+
+  File: a0\a.java
+  Match: des
+  Context: nsKey(obj) || !this.f69b.containsKey(obj2)) {             throw new IllegalArgumentException("All nodes must be present in the graph before being added as an edge");         }         ArrayList arrayL
+
+  File: a03\e.java
+  Match: des
+  Context: String strE = u03.a.e(strJ0);         l.L(map2, "page_url_domain", strE);         l.L(map, "destDomain", u03.a.e(str));         l.L(map, "destPath", u03.a.k(str));         l.L(map, "destUrl", str);   
+
+  File: a1\d.java
+  Match: Des
+  Context: rG2, strG3);             return;         }         throw new InflateException(typedArray.getPositionDescription() + " propertyXName or propertyYName is needed for PathData");     } }
+
+  File: a1\g.java
+  Match: Des
+  Context: if (c0003g.f200k <= 0.0f) {             throw new XmlPullParserException(typedArray.getPositionDescription() + "<vector> tag requires viewportWidth > 0");         }         if (fD <= 0.0f) {          
+
+  File: a13\d.java
+  Match: des
+  Context: int.FontMetricsInt fontMetricsInt = paint.getFontMetricsInt();         int i19 = ((((fontMetricsInt.descent + i17) + i17) + fontMetricsInt.ascent) / 2) - (drawable.getBounds().bottom / 2);         can
+
+  File: a21\g.java
+  Match: deS
+  Context: meng.pinduoduo.pay_core.interfaces.IPaymentService.InstallmentItemListener         public boolean hideSelected() {             return false;         }          @Override // com.xunmeng.pinduoduo.pay_c
+
+  File: a21\h.java
+  Match: deS
+  Context: meng.pinduoduo.pay_core.interfaces.IPaymentService.InstallmentItemListener         public boolean hideSelected() {             return false;         }          @Override // com.xunmeng.pinduoduo.pay_c
+
+  File: a21\s.java
+  Match: des
+  Context: n1.m mVar = this.f403w;         if (mVar != null) {             this.f405y = true;             mVar.destroy();         }     }      public void z() {         if (this.f405y) {             t();        
+
+  File: a41\b.java
+  Match: des
+  Context: eVar.x();         }         e eVar2 = this.f508b;         if (eVar2 != null) {             eVar2.destroyFrameBuffer();             this.f508b.destroy();             this.f508b = null;         }       
+
+  File: a50\b.java
+  Match: MessageDigest
+  Context: age a50;  import android.content.Context; import android.content.pm.Signature; import java.security.MessageDigest;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes2.dex */ publi
+
+  ... (and 8996 more matches)
+
+
+============================================================
+CATEGORY: DESKTOP_SHORTCUT
+Matches: 5
+============================================================
+
+  File: com\xunmeng\pinduoduo\app_widget\DdWidgetTask.java
+  Match: desk_shortcut
+  Context: ants; import com.xunmeng.pinduoduo.app_widget.DdWidgetTask; import com.xunmeng.pinduoduo.app_widget.desk_shortcut.receiver.ConfigurationChangedReceiver; import com.xunmeng.pinduoduo.app_widget.service
+
+  File: com\xunmeng\pinduoduo\app_widget\desk_shortcut\activities\DsCkActivity.java
+  Match: desk_shortcut
+  Context: package com.xunmeng.pinduoduo.app_widget.desk_shortcut.activities;  import android.app.Activity; import android.content.Intent; import android.os.Bundle; import com.xunmeng.core.log.L; import com.xunm
+
+  File: com\xunmeng\pinduoduo\app_widget\desk_shortcut\receiver\ConfigurationChangedReceiver.java
+  Match: desk_shortcut
+  Context: package com.xunmeng.pinduoduo.app_widget.desk_shortcut.receiver;  import android.content.BroadcastReceiver; import android.content.Context; import android.content.Intent;  /* JADX INFO: compiled from:
+
+  File: com\xunmeng\pinduoduo\helper\NotificationHelper.java
+  Match: desk_shortcut
+  Context: ongLived(true).setRank(10).setActivity(new ComponentName(context, "com.xunmeng.pinduoduo.app_widget.desk_shortcut.activities.DsCkActivity")).build());         }     }      public static boolean j(Stri
+
+  File: fi0\i.java
+  Match: desk_shortcut
+  Context: ort com.xunmeng.core.log.L; import com.xunmeng.pinduoduo.R; import com.xunmeng.pinduoduo.app_widget.desk_shortcut.activities.DsCkActivity; import com.xunmeng.pinduoduo.app_widget.utils.o_0; import com
+
+
+============================================================
+CATEGORY: DEVICE_ID
+Matches: 851
+============================================================
+
+  File: a03\c.java
+  Match: imeI
+  Context: d.TimeStampPoint.ONPAGEFINISHED_START.key)));         }         Map<String, Long> webViewKernelInitTimeInfo = FastJS.getWebViewKernelInitTimeInfo();         if (webViewKernelInitTimeInfo != null) {   
+
+  File: a3\a.java
+  Match: imeI
+  Context: return;         }         Calendar calendar = Calendar.getInstance();         calendar.setTimeInMillis(jF);         calendar.set(11, 0);         calendar.set(12, 0);         calendar.set(13, 0);      
+
+  File: a8\e.java
+  Match: imeI
+  Context: ) hVarL.f63859b;         }         Calendar calendar = Calendar.getInstance();         calendar.setTimeInMillis(j14);         int i14 = calendar.get(11);         if (i14 >= 6 && i14 < 9) {            
+
+  File: ak1\n0.java
+  Match: imeI
+  Context: r3 + "&group_id=" + str4 + "&goods_id=" + str5 + "&goods_number=1&ts=" + Calendar.getInstance().getTimeInMillis();         }         return str + "?sku_id=" + str2 + "&batch_sn=" + str3 + "&group_id="
+
+  File: androidx\appcompat\app\AppCompatDelegateImpl.java
+  Match: getDeviceId
+  Context: urn false;             }             boolean z15 = KeyCharacterMap.load(keyEvent != null ? keyEvent.getDeviceId() : -1).getKeyboardType() != 1;             panelFeatureState.f2608p = z15;             
+
+  File: androidx\core\content\ContextCompat.java
+  Match: TelephonyManager
+  Context: roid.telecom.TelecomManager; import android.telephony.SubscriptionManager; import android.telephony.TelephonyManager; import android.view.LayoutInflater; import android.view.WindowManager; import andr
+
+  File: androidx\recyclerview\widget\DefaultItemAnimator.java
+  Match: imeI
+  Context: oid.animation.Animator; import android.animation.AnimatorListenerAdapter; import android.animation.TimeInterpolator; import android.animation.ValueAnimator; import android.view.View; import android.vi
+
+  File: androidx\recyclerview\widget\g.java
+  Match: imeI
+  Context: public static class a implements Interpolator {             @Override // android.animation.TimeInterpolator             public float getInterpolation(float f14) {                 return f14 * f14 * f1
+
+  File: androidx\recyclerview\widget\RecyclerView.java
+  Match: imeI
+  Context: Pdd */     public static class c implements Interpolator {         @Override // android.animation.TimeInterpolator         public float getInterpolation(float f14) {             float f15 = f14 - 1.0f
+
+  File: androidx\transition\c.java
+  Match: imeI
+  Context: oid.animation.Animator; import android.animation.AnimatorListenerAdapter; import android.animation.TimeInterpolator; import android.graphics.Path; import android.util.SparseArray; import android.util.
+
+  ... (and 841 more matches)
+
+
+============================================================
+CATEGORY: DYNAMIC_LOADING
+Matches: 1093
+============================================================
+
+  File: a60\c.java
+  Match: ClassLoader
+  Context: nderProxy", "PapmBinder").e("setTransactListener", clsA).a(clsA.cast(Proxy.newProxyInstance(clsA.getClassLoader(), new Class[]{clsA}, new b(this, null))));             com.xunmeng.pinduoduo.apm.common
+
+  File: android\support\v4\media\MediaMetadataCompat.java
+  Match: ClassLoader
+  Context: {             return;         }         this.f2378a = parcel.readBundle(MediaSessionCompat.class.getClassLoader());     }      @Override // android.os.Parcelable     public void writeToParcel(Parcel p
+
+  File: android\support\v4\media\session\MediaSessionCompat.java
+  Match: ClassLoader
+  Context: f (h4.g.l(bundle, 590).f63858a || bundle == null) {             return;         }         bundle.setClassLoader(MediaSessionCompat.class.getClassLoader());     }      public static PlaybackStateCompat
+
+  File: android\support\v4\media\session\PlaybackStateCompat.java
+  Match: ClassLoader
+  Context: .f2454c = parcel.readInt();             this.f2455d = parcel.readBundle(MediaSessionCompat.class.getClassLoader());         }          public CustomAction(String str, CharSequence charSequence, int i1
+
+  File: androidx\appcompat\app\AppCompatDelegateImpl.java
+  Match: ClassLoader
+  Context: /* JADX INFO: compiled from: Pdd */             public static class a implements Parcelable.ClassLoaderCreator {                 @Override // android.os.Parcelable.Creator                 /* JADX INFO
+
+  File: androidx\appcompat\app\AppCompatViewInflater.java
+  Match: ClassLoader
+  Context: w> constructor = map.get(str);         if (constructor == null) {             try {                 ClassLoader classLoader = context.getClassLoader();                 if (str2 != null) {             
+
+  File: androidx\appcompat\widget\SearchView.java
+  Match: ClassLoader
+  Context: c;          /* JADX INFO: compiled from: Pdd */         public static class a implements Parcelable.ClassLoaderCreator {             @Override // android.os.Parcelable.Creator             /* JADX INFO
+
+  File: androidx\appcompat\widget\Toolbar.java
+  Match: ClassLoader
+  Context: d;          /* JADX INFO: compiled from: Pdd */         public static class a implements Parcelable.ClassLoaderCreator {             @Override // android.os.Parcelable.Creator             /* JADX INFO
+
+  File: androidx\coordinatorlayout\widget\CoordinatorLayout.java
+  Match: ClassLoader
+  Context: c;          /* JADX INFO: compiled from: Pdd */         public static class a implements Parcelable.ClassLoaderCreator {             @Override // android.os.Parcelable.Creator             /* JADX INFO
+
+  File: androidx\core\app\CoreComponentFactory.java
+  Match: ClassLoader
+  Context: jA;     }      @Override // android.app.AppComponentFactory     public Activity instantiateActivity(ClassLoader classLoader, String str, Intent intent) {         h4.h hVarG = h4.g.g(classLoader, str, 
+
+  ... (and 1083 more matches)
+
+
+============================================================
+CATEGORY: FLOATING_WINDOW
+Matches: 2930
+============================================================
+
+  File: ak1\a.java
+  Match: FloatWindow
+  Context: ce == null) {             return;         }         if (!z14) {             iLiveModuleService.resetFloatWindowPosition("goods_detail");             return;         }         FloatMoveUserInfo floatMo
+
+  File: ak1\e2.java
+  Match: float_window
+  Context: t_lego_component_8050", true, true, true);     }      public static void Y0() {         of1.a.d("ab_float_window_delay_init_7780", "0", true);     }      public static boolean Y2() {         return of
+
+  File: an\a.java
+  Match: FloatWindow
+  Context: s.isEmpty(str)) {             PlayerLogger.e("HttpNetworkProcessor", com.pushsdk.a.f14484d, "onStoreFloatWindowRes responseJson null");         } else {             c(d(c.c(str, "result", new String[0
+
+  File: an\b.java
+  Match: float_window
+  Context: ), this.f2215d);             if (e()) {                 y.a(jSONObject.optJSONArray("response_store_float_window_apis"), this.f2216e);             }         } catch (JSONException e14) {             L
+
+  File: androidx\appcompat\app\AppCompatDelegateImpl.java
+  Match: Floating: " + this.B + ", windowActionModeOverlay: " + this.A + ", window
+  Context: windowActionBar: " + this.f2584y + ", windowActionBarOverlay: " + this.f2585z + ", android:windowIsFloating: " + this.B + ", windowActionModeOverlay: " + this.A + ", windowNoTitle: " + this.C + " }");
+
+  File: aq\b.java
+  Match: float_window
+  Context: son: collision with root package name */     public static final boolean f5428a = AbTest.isTrue("ab_float_window_auto_size_7910", false);      /* JADX INFO: renamed from: b, reason: collision with roo
+
+  File: ay\d.java
+  Match: float_window.live.PDDLiveWindow
+  Context: ls; import com.xunmeng.core.config.Configuration; import com.xunmeng.pdd_av_foundation.pddlivescene.float_window.live.PDDLiveWindowConfig; import com.xunmeng.pinduoduo.api_router.entity.PageStack; imp
+
+  File: ay\j.java
+  Match: floatwindow.base.AVBaseFloatWindow
+  Context: Tracker; import com.xunmeng.core.track.api.IEventTrack; import com.xunmeng.pdd_av_foundation.pdd_av_floatwindow.base.AVBaseFloatWindow; import com.xunmeng.pdd_av_foundation.pddlive.constants.OnMicStat
+
+  File: bq\a.java
+  Match: floating_window
+  Context: try {             JSONArray jSONArray = new JSONArray(com.xunmeng.pinduoduo.arch.config.a.w().o("ab_floating_window_page_from_70000", "[\"601109\", \"60291\"]"));             for (int i14 = 0; i14 < j
+
+  File: bz\i.java
+  Match: FloatWindow
+  Context: ort com.xunmeng.core.track.ITracker; import com.xunmeng.pdd_av_foundation.pddlivescene.model.PDDLiveFloatWindowResult; import com.xunmeng.pdd_av_foundation.pddlivescene.model.response.PDDLiveBaseRespo
+
+  ... (and 2920 more matches)
+
+
+============================================================
+CATEGORY: HIDDEN_APP
+Matches: 7
+============================================================
+
+  File: com\xunmeng\pinduoduo\adapter_sdk\utils\BotAppListApi.java
+  Match: getLaunchIntentForPackage
+  Context: nt i14, String str) {         return d.b(packageManager, i14, str);     }      public static Intent getLaunchIntentForPackage(PackageManager packageManager, String str, String str2) {         return d
+
+  File: com\xunmeng\pinduoduo\market_ad_common\init\LockScreenInitTask.java
+  Match: packageManager.setComponentEnabledSetting
+  Context: omponentEnabledSetting));                 if (i14 != componentEnabledSetting) {                     packageManager.setComponentEnabledSetting(componentName, i14, 1);                     L.i(32636, Int
+
+  File: i2\e.java
+  Match: packageManager.setComponentEnabledSetting
+  Context: if (1 != packageManager.getComponentEnabledSetting(componentName)) {                     packageManager.setComponentEnabledSetting(componentName, 1, 1);                 }             } catch (Exceptio
+
+  File: pb2\a.java
+  Match: getLaunchIntentForPackage
+  Context: ring str, String str2) {         if (b82.a.b()) {             mb2.b.h(GalerieService.APPID_OTHERS, "getLaunchIntentForPackage", str2);             return packageManager.getLaunchIntentForPackage(str);
+
+  File: pb2\c.java
+  Match: getLaunchIntentForPackage
+  Context: ageManager packageManager, String str, String str2) {         mb2.b.h(GalerieService.APPID_OTHERS, "getLaunchIntentForPackage", str2);         return packageManager.getLaunchIntentForPackage(str);    
+
+
+============================================================
+CATEGORY: LOCATION
+Matches: 126
+============================================================
+
+  File: a30\p.java
+  Match: LocationManager
+  Context: package a30;  import android.location.Location; import android.location.LocationManager; import android.os.Build; import com.xunmeng.core.ab.AbTest; import com.xunmeng.core.log.L; import com.xunmeng.p
+
+  File: androidx\core\content\ContextCompat.java
+  Match: LocationManager
+  Context: ndroid.hardware.input.InputManager; import android.hardware.usb.UsbManager; import android.location.LocationManager; import android.media.AudioManager; import android.media.MediaRouter; import android
+
+  File: bc2\a.java
+  Match: LocationManager
+  Context: ifi", "android.net.wifi.IWifiManager", new ic2.b(zF));             c("location", "android.location.ILocationManager", new gc2.a(zF));             c("telephony.registry", "com.android.internal.telephon
+
+  File: c30\c.java
+  Match: LocationManager
+  Context: import android.location.Location; import android.location.LocationListener; import android.location.LocationManager; import android.net.wifi.WifiManager; import com.xunmeng.core.ab.AbTest; import com.
+
+  File: com\tencent\open\utils\i.java
+  Match: LocationManager
+  Context: nature; import android.location.Criteria; import android.location.Location; import android.location.LocationManager; import android.net.ConnectivityManager; import android.net.NetworkInfo; import andr
+
+  File: d30\b.java
+  Match: LocationManager
+  Context: package d30;  import android.location.Location; import android.location.LocationManager; import android.text.TextUtils; import com.xunmeng.core.config.Configuration; import com.xunmeng.core.log.L; imp
+
+  File: d30\c.java
+  Match: LocationManager
+  Context: package d30;  import android.location.LocationListener; import android.location.LocationManager; import com.xunmeng.core.log.L; import com.xunmeng.pinduoduo.aop_defensor.collection.SafeConcurrentHashM
+
+  File: d30\i.java
+  Match: LocationManager
+  Context: import android.location.Location; import android.location.LocationListener; import android.location.LocationManager; import android.os.Bundle; import android.text.TextUtils; import com.xunmeng.core.ab
+
+  File: g30\e.java
+  Match: LocationManager
+  Context: import android.location.Location; import android.location.LocationListener; import android.location.LocationManager; import android.os.Bundle; import com.xunmeng.basiccomponent.pnet.jni.struct.StQuicC
+
+  File: gc2\a.java
+  Match: requestLocationUpdates
+  Context: break;                     case -874501946:                         if (!l.e(name, "requestLocationUpdates")) {                             b14 = -1;                         } else {                  
+
+  ... (and 116 more matches)
+
+
+============================================================
+CATEGORY: NATIVE_LOADING
+Matches: 20
+============================================================
+
+  File: com\android\efix\utils\InvokeUtils.java
+  Match: System.loadLibrary
+  Context: ng str) {         System.load(str);     }      public static void loadLibrary(String str) {         System.loadLibrary(str);     } }
+
+  File: com\tencent\mmkv\MMKV.java
+  Match: System.loadLibrary
+  Context: }         if (libLoader != null) {             libLoader.a("mmkv");         } else {             System.loadLibrary("mmkv");         }         jniInitialize(str, str2);         if (f14682c != null) { 
+
+  File: com\tencent\open\web\security\JniInterface.java
+  Match: System.load
+  Context: so is not exists:" + AuthAgent.SECURE_LIB_NAME);                 return;             }             System.load(contextA.getFilesDir().toString() + "/" + AuthAgent.SECURE_LIB_NAME);             isJniOk
+
+  File: pcrash\NativeHandler.java
+  Match: System.loadLibrary
+  Context: bVar2, g gVar, c cVar, String str4) {         if (dVar == null) {             try {                 System.loadLibrary("pcrash");             } catch (Throwable th3) {                 h.f81170f.e("xcr
+
+  File: pcrash\anr_v2\AnrMonitor.java
+  Match: System.loadLibrary
+  Context: } else {             f85452f = System.currentTimeMillis();         }         try {             System.loadLibrary("pcrash_anr");             if (jniInit() != 0) {                 h.f81170f.e("Papm.Anr
+
+  File: q23\a.java
+  Match: System.loadLibrary
+  Context: s q23.b {         @Override // q23.b         public boolean a() {             try {                 System.loadLibrary("meco_cookie");                 return true;             } catch (Throwable th3) 
+
+  File: sh2\b.java
+  Match: System.loadLibrary
+  Context: Loader(), str);                         }                         try {                             System.loadLibrary(str);                             try {                                 L.i(40843
+
+  File: uh2\d.java
+  Match: System.loadLibrary
+  Context: if (f99711d != null) {             return p.a(f99711d);         }         try {             System.loadLibrary("CSoLoader");             f99711d = Boolean.TRUE;         } catch (Throwable th3) {      
+
+  File: xmg\mobilebase\utils\dokodoor\DokodoorCompatR.java
+  Match: System.loadLibrary
+  Context: null);             }             long jElapsedRealtime = SystemClock.elapsedRealtime();             System.loadLibrary("dokodoor");             long jElapsedRealtime2 = SystemClock.elapsedRealtime(); 
+
+
+============================================================
+CATEGORY: PACKAGE_INSTALL
+Matches: 3
+============================================================
+
+  File: com\aimi\android\common\push\utils\PushComponentUtils.java
+  Match: PackageInstaller
+  Context: vity", "com.huawei.updatesdk.service.otaupdate.AppUpdateActivity", "com.huawei.updatesdk.support.pm.PackageInstallerActivity", "com.aimi.android.common.push.huawei.HwPushReceiver", "com.huawei.hms.sup
+
+  File: lc2\b.java
+  Match: INSTALL_PACKAGES
+  Context: g str : strArr) {                             if (TextUtils.equals(str, "android.permission.REQUEST_INSTALL_PACKAGES")) {                                 f74101b = Boolean.TRUE;                       
+
+
+============================================================
+CATEGORY: PUSH_PULL_ALIVE
+Matches: 210
+============================================================
+
+  File: com\alipay\android\phone\mrpc\core\b.java
+  Match: Keep-Alive
+  Context: }      public static void b(HttpRequest httpRequest) {         httpRequest.addHeader("Connection", "Keep-Alive");     }      private static boolean b(HttpUriRequest httpUriRequest) {         Header[] 
+
+  File: com\alipay\android\phone\mrpc\core\d.java
+  Match: KeepAlive
+  Context: Handler; import org.apache.http.conn.ClientConnectionManager; import org.apache.http.conn.ConnectionKeepAliveStrategy; import org.apache.http.impl.client.DefaultHttpClient; import org.apache.http.para
+
+  File: com\alipay\android\phone\mrpc\core\f.java
+  Match: KeepAlive
+  Context: ndroid.phone.mrpc.core;  import org.apache.http.HttpResponse; import org.apache.http.conn.ConnectionKeepAliveStrategy; import org.apache.http.protocol.HttpContext;  /* JADX INFO: loaded from: classes.
+
+  File: com\alipay\sdk\net\a.java
+  Match: Keep-Alive
+  Context: httpPost.addHeader("Accept-Charset", "UTF-8");                 httpPost.addHeader("Connection", "Keep-Alive");                 httpPost.addHeader("Keep-Alive", "timeout=180, max=100");             }  
+
+  File: com\media\tronplayer\preload\TronPreloader.java
+  Match: KeepAlive
+  Context: NeedCache();      private native void _clearPreloadList(String str);      private native void _closeKeepAlive();      private native void _flushOption(int i14);      private native String _getCachedPa
+
+  File: com\pdd\audio\audioenginesdk\AEAudioTrackPlayer.java
+  Match: keepAlive
+  Context: n.parseBoolean(f.e().d("ab_ae_use_non_block_audiotrack_720", "false"));     public volatile boolean keepAlive = true;     private Runnable audioTrackRunnable = new Runnable() { // from class: com.pdd.
+
+  File: com\pdd\audio\audioenginesdk\fileplayer\AudioPlayer.java
+  Match: keepAlive
+  Context: allback playDataCallback = null;     private Thread innerThread = null;     public volatile boolean keepAlive = true;     public volatile boolean isPlaying = true;     public volatile boolean isPause 
+
+  File: com\tencent\open\utils\HttpUtils.java
+  Match: Keep-Alive
+  Context: boundary=3i2ndDfv2rTHiSisAbouNdArYfORhtTPEefj3q2f");             httpPost.setHeader("Connection", "Keep-Alive");             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(); 
+
+  File: com\xunmeng\basiccomponent\pnet\jni\struct\StConnectConfig.java
+  Match: keepAlive
+  Context: AllowedContinuousErrorCount;     int connectTimeoutMs;     boolean enableSSLComplexConnect;     int keepAliveTimeoutMs;     int udpSocketRecvBufferSize;      public StConnectConfig() {         if (g.d
+
+  File: com\xunmeng\basiccomponent\titan\aidl\HeartBeatConfig.java
+  Match: Heartbeat
+  Context: com.xunmeng.basiccomponent.titan.aidl;  import com.xunmeng.basiccomponent.titan.jni.DataStructure.StHeartbeatConfig; import java.util.HashMap;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded
+
+  ... (and 200 more matches)
+
+
+============================================================
+CATEGORY: REFLECTION
+Matches: 418
+============================================================
+
+  File: ai2\c.java
+  Match: Class.forName
+  Context: str = (String) itF.next();             Object objA = null;             try {                 cls = Class.forName(str);             } catch (ClassNotFoundException unused) {                 P.i(41110, 
+
+  File: androidx\appcompat\app\AppCompatDelegateImpl.java
+  Match: Class.forName
+  Context: ();             } else {                 try {                     this.R = (AppCompatViewInflater) Class.forName(string).getDeclaredConstructor(null).newInstance(null);                 } catch (Throw
+
+  File: androidx\appcompat\view\menu\MenuItemWrapperICS.java
+  Match: getDeclaredMethod
+  Context: if (this.f2673e == null) {                 this.f2673e = ((g0.b) this.f87231a).getClass().getDeclaredMethod("setExclusiveCheckable", Boolean.TYPE);             }             this.f2673e.invoke(this.f8
+
+  File: androidx\appcompat\widget\DropDownListView.java
+  Match: Field.set
+  Context: tDeclaredField("mIsChildViewEnabled");             this.f3028g = declaredField;             declaredField.setAccessible(true);         } catch (NoSuchFieldException e14) {             e14.printStackTr
+
+  File: androidx\appcompat\widget\ListPopupWindow.java
+  Match: method.invoke
+  Context: }         Method method = J;         if (method != null) {             try {                 method.invoke(this.G, this.E);             } catch (Exception e14) {                 Log.e("ListPopupWindow
+
+  File: androidx\appcompat\widget\MenuPopupWindow.java
+  Match: method.invoke
+  Context: s, 2820).f63858a || (method = L) == null) {             return;         }         try {             method.invoke(this.G, Boolean.valueOf(z14));         } catch (Exception unused) {             Log.i(
+
+  File: androidx\appcompat\widget\SearchView.java
+  Match: method.invoke
+  Context: d = this.f3156b) == null) {                 return;             }             try {                 method.invoke(autoCompleteTextView, null);             } catch (Exception unused) {             }   
+
+  File: androidx\core\app\g.java
+  Match: method.invoke
+  Context: P_POST_NOTIFICATION").get(Integer.class);             num.intValue();             return ((Integer) method.invoke(appOpsManager, num, Integer.valueOf(i14), packageName)).intValue() == 0;         } cat
+
+  File: androidx\core\graphics\drawable\DrawableCompat.java
+  Match: method.invoke
+  Context: }         Method method = f3689a;         if (method != null) {             try {                 method.invoke(drawable, Integer.valueOf(i14));                 return true;             } catch (Excep
+
+  File: androidx\fragment\app\e.java
+  Match: Field.set
+  Context: ion.class.getDeclaredField("mListener");                 F = declaredField;                 declaredField.setAccessible(true);             }             return (Animation.AnimationListener) F.get(anim
+
+  ... (and 408 more matches)
+
+
+============================================================
+CATEGORY: SCREENSHOT
+Matches: 1214
+============================================================
+
+  File: ak1\k.java
+  Match: Screenshot
+  Context: enamed from: a, reason: collision with root package name */     public final String f1875a = "BridgeScreenshotHelper";      /* JADX INFO: renamed from: e, reason: collision with root package name */  
+
+  File: ak1\p.java
+  Match: ScreenShot
+  Context: package ak1;  import com.xunmeng.pinduoduo.app_album_resource.IScreenShotService;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes4.dex */ public class p {      /* JADX INFO: re
+
+  File: ak1\q2.java
+  Match: screenshot
+  Context: e, ml1.d.b().setImageDimension(bitmap.getWidth(), bitmap.getHeight()).setSearchMet(z14 ? "goods_dtl_screenshot" : "goods_dtl_pic_storage").setGoodsId(str).setSource("10057"));         } catch (Throwab
+
+  File: ak1\u.java
+  Match: ScreenShot
+  Context: iew.Window; import androidx.fragment.app.Fragment; import com.xunmeng.pinduoduo.app_album_resource.IScreenShotService; import com.xunmeng.pinduoduo.basekit.common.NewAppConfig; import com.xunmeng.pind
+
+  File: androidx\core\content\ContextCompat.java
+  Match: MediaProjection
+  Context: mport android.media.AudioManager; import android.media.MediaRouter; import android.media.projection.MediaProjectionManager; import android.media.session.MediaSessionManager; import android.media.tv.Tv
+
+  File: com\xunmeng\pinduoduo\R.java
+  Match: screenshot
+  Context: static final int business_dialog_save_image = 0x7f100e88;         public static final int business_screenshot_share_to_friend = 0x7f100e89;         public static final int business_ui_cancel = 0x7f100
+
+  File: com\xunmeng\pinduoduo\adapter_sdk\screenshot\BotScreenShot.java
+  Match: screenshot
+  Context: package com.xunmeng.pinduoduo.adapter_sdk.screenshot;  import android.content.Context; import com.xunmeng.pinduoduo.app_album_resource.IScreenShotService; import com.xunmeng.router.Router;  /* JADX IN
+
+  File: com\xunmeng\pinduoduo\app_album_resource\IScreenShotService.java
+  Match: ScreenShot
+  Context: ;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes3.dex */ public interface IScreenShotService extends ModuleService {      /* JADX INFO: compiled from: Pdd */     public static
+
+  File: com\xunmeng\pinduoduo\app_mall_video\web\PDDNativeVideo.java
+  Match: screenshot
+  Context: ull);             }         }     }      @JsInterface(threadMode = JsThreadMode.UI)     public void screenshot(BridgeRequest bridgeRequest, ICommonCallBack<JSONObject> iCommonCallBack) {         JSONO
+
+  File: com\xunmeng\pinduoduo\comment\fragment\BaseCommentFragment.java
+  Match: ScreenShot
+  Context: eng.pinduoduo.api_router.interfaces.RouterService; import com.xunmeng.pinduoduo.app_album_resource.IScreenShotService; import com.xunmeng.pinduoduo.app_base_ui.helper.AlertDialogHelper; import com.xun
+
+  ... (and 1204 more matches)
+
+
+============================================================
+CATEGORY: SELF_UPDATE
+Matches: 5615
+============================================================
+
+  File: a02\i.java
+  Match: Update
+  Context: // com.xunmeng.pinduoduo.arch.vita.IFetcherListener     public void a(String str, IFetcherListener.UpdateResult updateResult, String str2) {         if (updateResult == IFetcherListener.UpdateResult.N
+
+  File: a13\g.java
+  Match: Update
+  Context: f274k;      /* JADX INFO: compiled from: Pdd */     public class a implements ValueAnimator.AnimatorUpdateListener {         public a() {         }          @Override // android.animation.ValueAnimato
+
+  File: a21\g.java
+  Match: Update
+  Context: pinduoduo.pay_core.interfaces.IPaymentService.InstallmentItemListener         public void onShowAnimUpdate() {         }     }      public static void A(List list, InstallmentItemInfo installmentItemI
+
+  File: a21\h.java
+  Match: Update
+  Context: pinduoduo.pay_core.interfaces.IPaymentService.InstallmentItemListener         public void onShowAnimUpdate() {         }     }      private boolean B() {         return this.f373b.f109907o;     }     
+
+  File: a21\q.java
+  Match: update
+  Context: Override // android.text.style.ClickableSpan, android.text.style.CharacterStyle         public void updateDrawState(TextPaint textPaint) {             super.updateDrawState(textPaint);             tex
+
+  File: a3\a.java
+  Match: update
+  Context: message_5910", true)) {             MessageCenter.getInstance().send(new Message0("message_type_dau_update"), true);         }     }      @Override // d2.b     public /* synthetic */ void b(Map map, M
+
+  File: a41\b.java
+  Match: update
+  Context: public void p() {         synchronized (this.f526t) {             try {                 this.f523q.updateTexImage();                 this.f523q.getTransformMatrix(this.f525s);                 float f1
+
+  File: a50\b.java
+  Match: update
+  Context: MessageDigest messageDigest = MessageDigest.getInstance("SHA1");             messageDigest.update(signatureArr[0].toByteArray());             byte[] bArrDigest = messageDigest.digest();             St
+
+  File: a82\c.java
+  Match: Update
+  Context: com.xunmeng.pinduoduo.arch.vita.IFetcherListener         public void a(String str, IFetcherListener.UpdateResult updateResult, String str2) {             if (updateResult == IFetcherListener.UpdateRes
+
+  File: a82\d.java
+  Match: Update
+  Context: com.xunmeng.pinduoduo.arch.vita.IFetcherListener         public void a(String str, IFetcherListener.UpdateResult updateResult, String str2) {             if (updateResult == IFetcherListener.UpdateRes
+
+  ... (and 5605 more matches)
+
+
+============================================================
+CATEGORY: SENSOR
+Matches: 248
+============================================================
+
+  File: androidx\core\content\ContextCompat.java
+  Match: SensorManager
+  Context: roid.graphics.drawable.Drawable; import android.hardware.ConsumerIrManager; import android.hardware.SensorManager; import android.hardware.camera2.CameraManager; import android.hardware.display.Displa
+
+  File: com\alipay\b\a\a\b\b.java
+  Match: SensorManager
+  Context: ntent; import android.content.IntentFilter; import android.hardware.Sensor; import android.hardware.SensorManager; import android.media.AudioManager; import android.net.ConnectivityManager; import and
+
+  File: com\xunmeng\pdd_av_foundation\pdd_media_core\util\f.java
+  Match: SensorManager
+  Context: android.hardware.SensorEvent; import android.hardware.SensorEventListener; import android.hardware.SensorManager; import com.xunmeng.core.log.L; import com.xunmeng.pinduoduo.threadpool.SubThreadBiz; i
+
+  File: com\xunmeng\pinduoduo\chat\chatBiz\chatDetail\Component\inputPanelComponent\VoiceMsgInputPanel.java
+  Match: SensorManager
+  Context: android.hardware.SensorEvent; import android.hardware.SensorEventListener; import android.hardware.SensorManager; import android.media.AudioAttributes; import android.media.AudioFocusRequest; import a
+
+  File: com\xunmeng\pinduoduo\shake\activity\ShakeActivity.java
+  Match: SensorManager
+  Context: ake.activity;  import android.app.Activity; import android.content.Context; import android.hardware.SensorManager; import android.os.SystemClock; import android.util.Pair; import com.aimi.android.comm
+
+  File: com\xunmeng\pinduoduo\shake\algorithm\a.java
+  Match: SensorEventListener
+  Context: cVar : this.f44751e) {             cVar.f(i14);         }     }      @Override // android.hardware.SensorEventListener     public void onAccuracyChanged(Sensor sensor, int i14) {         h().onAccurac
+
+  File: com\xunmeng\pinduoduo\shake\algorithm\a_3.java
+  Match: SensorEventListener
+  Context: l = this.f44762n;     }      @Override // com.xunmeng.pinduoduo.shake.algorithm.c, android.hardware.SensorEventListener     public void onSensorChanged(SensorEvent sensorEvent) {         super.onSenso
+
+  File: com\xunmeng\pinduoduo\shake\algorithm\b_3.java
+  Match: SensorEventListener
+  Context: + ((double) f15);     }      @Override // com.xunmeng.pinduoduo.shake.algorithm.c, android.hardware.SensorEventListener     public void onSensorChanged(SensorEvent sensorEvent) {         super.onSenso
+
+  File: com\xunmeng\pinduoduo\shake\algorithm\c.java
+  Match: SensorEventListener
+  Context: ed from: Pdd */     public interface a {         void a();     }      @Override // android.hardware.SensorEventListener     public void onSensorChanged(SensorEvent sensorEvent) {         if (this.f447
+
+  File: com\xunmeng\pinduoduo\shake\algorithm\c_3.java
+  Match: SensorEventListener
+  Context: + ((double) i16);     }      @Override // com.xunmeng.pinduoduo.shake.algorithm.c, android.hardware.SensorEventListener     public void onSensorChanged(SensorEvent sensorEvent) {         super.onSenso
+
+  ... (and 238 more matches)
+
+
+============================================================
+CATEGORY: SYSTEM_ALERT_WINDOW
+Matches: 5
+============================================================
+
+  File: qz1\d.java
+  Match: Settings.canDrawOverlays
+  Context: RSION.SDK_INT < 23) {             return n(context, 24);         }         try {             return Settings.canDrawOverlays(context.getApplicationContext()) ? 1 : 2;         } catch (Exception e14) {
+
+  File: rz1\g.java
+  Match: Settings.canDrawOverlays
+  Context: text context) {         if (Build.VERSION.SDK_INT >= 28) {             try {                 return Settings.canDrawOverlays(context.getApplicationContext()) ? 1 : 2;             } catch (Exception e1
+
+  File: uh0\d.java
+  Match: Settings.canDrawOverlays
+  Context: youtParams.y = ((int) ScreenUtil.getScreenHeight()) / 2;         if (Build.VERSION.SDK_INT < 26 || !Settings.canDrawOverlays(applicationContext)) {             this.f99568d.type = INotificationPermiss
+
+  File: ul1\f.java
+  Match: Settings.canDrawOverlays
+  Context: xt context) {         if (Build.VERSION.SDK_INT >= 23) {             L.i(29972);             return Settings.canDrawOverlays(context);         }         L.i(29973);         return true;     }      pub
+
+  File: w72\a.java
+  Match: system_alert_window
+  Context: 4896a = map;         HashMap map2 = new HashMap();         f104897b = map2;         l.L(map, "12", "system_alert_window");         l.L(map, HomeTopTab.TAG_ID_WEB, "access_clipboard");         l.L(map,
+
+
+============================================================
+CATEGORY: WEBSOCKET_LONG_CONN
+Matches: 555
+============================================================
+
+  File: bf1\d.java
+  Match: OkHttpClient
+  Context: ava.util.ArrayList; import java.util.concurrent.TimeUnit; import okhttp3.Dispatcher; import okhttp3.OkHttpClient; import okhttp3.Protocol; import u40.l;  /* JADX INFO: compiled from: Pdd */ /* JADX IN
+
+  File: com\aimi\android\common\http\AppNetworkInitTask.java
+  Match: OkHttpClient
+  Context: t; import java.util.concurrent.atomic.AtomicBoolean; import java.util.regex.Pattern; import okhttp3.OkHttpClient; import org.json.JSONArray; import org.json.JSONException; import org.json.JSONObject; 
+
+  File: com\aimi\android\common\http\f.java
+  Match: OkHttpClient
+  Context: .http.dns.HttpDns; import java.io.IOException; import java.util.concurrent.TimeUnit; import okhttp3.OkHttpClient; import okhttp3.d0; import okhttp3.f0; import u40.l;  /* JADX INFO: compiled from: Pdd 
+
+  File: com\aimi\android\common\http\netdetect\a_2.java
+  Match: OkHttpClient
+  Context: eadPool; import java.io.IOException; import java.util.HashMap; import java.util.Map; import okhttp3.OkHttpClient; import okhttp3.d0; import okhttp3.f; import okhttp3.f0; import okhttp3.g;  /* JADX INF
+
+  File: com\aimi\android\common\http\netdetect\BadNetDetectService.java
+  Match: OkHttpClient
+  Context: til.concurrent.CopyOnWriteArraySet; import java.util.concurrent.locks.ReentrantLock; import okhttp3.OkHttpClient; import okhttp3.d0; import okhttp3.f0; import okhttp3.w; import u40.l;  /* JADX INFO: c
+
+  File: com\aimi\android\common\http\unity\UnityCallFactory.java
+  Match: OkHttpClient
+  Context: .Arrays; import java.util.List; import okhttp3.CookieJar; import okhttp3.Dispatcher; import okhttp3.OkHttpClient; import okhttp3.d0; import okhttp3.f0; import pu1.j; import pu1.k; import pu1.l; import
+
+  File: com\alipay\android\phone\mrpc\core\d.java
+  Match: KeepAlive
+  Context: Handler; import org.apache.http.conn.ClientConnectionManager; import org.apache.http.conn.ConnectionKeepAliveStrategy; import org.apache.http.impl.client.DefaultHttpClient; import org.apache.http.para
+
+  File: com\alipay\android\phone\mrpc\core\f.java
+  Match: KeepAlive
+  Context: ndroid.phone.mrpc.core;  import org.apache.http.HttpResponse; import org.apache.http.conn.ConnectionKeepAliveStrategy; import org.apache.http.protocol.HttpContext;  /* JADX INFO: loaded from: classes.
+
+  File: com\media\tronplayer\preload\TronPreloader.java
+  Match: KeepAlive
+  Context: NeedCache();      private native void _clearPreloadList(String str);      private native void _closeKeepAlive();      private native void _flushOption(int i14);      private native String _getCachedPa
+
+  File: com\pdd\audio\audioenginesdk\AEAudioTrackPlayer.java
+  Match: keepAlive
+  Context: n.parseBoolean(f.e().d("ab_ae_use_non_block_audiotrack_720", "false"));     public volatile boolean keepAlive = true;     private Runnable audioTrackRunnable = new Runnable() { // from class: com.pdd.
+
+  ... (and 545 more matches)
+
+
+============================================================
+CATEGORY: WEBVIEW_BRIDGE
+Matches: 4003
+============================================================
+
+  File: a03\c.java
+  Match: webview
+  Context: == null) {             L.i(48087);             return map;         }         l.L(map, "long_active_webview_count", Long.valueOf(mb1.a.f76302e));         l.L(map, "long_loading_webview_count", Long.val
+
+  File: b33\b.java
+  Match: WebView
+  Context: package b33;  import com.android.meco.base.WebViewType; import meco.webkit.WebMessagePort;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes6.dex */ public abstract /* synthetic 
+
+  File: b33\c.java
+  Match: addJavascriptInterface
+  Context: NFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes6.dex */ public interface c {     void addJavascriptInterface(Object obj, String str);      boolean canGoBack();      boolean canGoBackOrFo
+
+  File: bz2\d.java
+  Match: WebView
+  Context: import com.xunmeng.pinduoduo.basekit.util.StringUtil; import com.xunmeng.pinduoduo.fastjs.api.FastJsWebView; import com.xunmeng.pinduoduo.meepo.core.base.Page; import com.xunmeng.pinduoduo.meepo.core.
+
+  File: bz2\i.java
+  Match: WebView
+  Context: xunmeng.pinduoduo.base.activity.BaseFragmentActivity; import com.xunmeng.pinduoduo.fastjs.api.FastJsWebView; import com.xunmeng.pinduoduo.fastjs.main.FastJS; import com.xunmeng.pinduoduo.meepo.core.ba
+
+  File: c33\a.java
+  Match: addJavascriptInterface
+  Context: d b(WebView webView) {         return new a(webView);     }      @Override // b33.c     public void addJavascriptInterface(Object obj, String str) {         this.f10135a.addJavascriptInterface(obj, st
+
+  File: c33\b.java
+  Match: addJavascriptInterface
+  Context: d b(WebView webView) {         return new b(webView);     }      @Override // b33.c     public void addJavascriptInterface(Object obj, String str) {         this.f10172a.addJavascriptInterface(obj, st
+
+  File: cc1\c.java
+  Match: WebView
+  Context: nstanceof AndroidRuntimeException) {             if (!Log.getStackTraceString(th3).contains("MissingWebViewPackageException")) {                 return false;             }             L.w(27261);    
+
+  File: cc1\g.java
+  Match: WebView
+  Context: rt android.os.Build; import android.os.Looper; import android.text.TextUtils; import android.webkit.WebView; import com.android.meco.base.semver.Semver; import com.xunmeng.core.config.Configuration; i
+
+  File: cc1\h.java
+  Match: WebView
+  Context: ndroid.text.TextUtils; import com.xunmeng.core.log.L; import com.xunmeng.pinduoduo.fastjs.api.FastJsWebView;  /* JADX INFO: compiled from: Pdd */ /* JADX INFO: loaded from: classes4.dex */ public abst
+
+  ... (and 3993 more matches)
+

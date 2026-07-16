@@ -1,0 +1,29 @@
+# 二进制 / 大文件
+base.apk
+*.apk
+*.zip
+*.xz
+*.tar.gz
+
+# JADX 反编译输出（24,827 个文件，太大）
+jadx_output/
+
+# 工具链二进制（SDK / JADX / Frida）
+tools/android-sdk/
+tools/jadx/
+tools/frida/
+
+# 模拟器日志
+tools/emulator.log
+tools/emulator_log.txt
+tools/emulator_log2.txt
+tools/emulator_pid.txt
+tools/install_result.txt
+tools/license_result.txt
+tools/jadx_log.txt
+
+# 临时文件
+$null
+*.pyc
+__pycache__/
+.tzd/
