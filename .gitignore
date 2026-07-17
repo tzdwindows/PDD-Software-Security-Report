@@ -1,12 +1,15 @@
 # 二进制 / 大文件
 base.apk
+base_QQ.apk
 *.apk
 *.zip
 *.xz
 *.tar.gz
 
-# JADX 反编译输出（24,827 个文件，太大）
+# JADX 反编译输出（太大）
 jadx_output/
+qq_jadx_output/
+qq_extracted/
 
 # 工具链二进制（SDK / JADX / Frida）
 tools/android-sdk/

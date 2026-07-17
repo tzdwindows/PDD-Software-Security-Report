@@ -12,17 +12,19 @@
 
 **核心发现：PDD 通过 `SystemServiceHooker` 在 Binder 层劫持了 8 个 Android 系统服务，包括全局剪贴板（`IClipboard`）、定位（`ILocationManager`）、电话（`ITelephony`）等，实现了对设备上所有应用行为的实时监控。**
 
----
-
-## 项目结构
-
 ```
 F:\pdd逆向工程\
 ├── README.md                                     # 本文件
-├── base.apk                                      # 目标 APK (25.9 MB)
-├── jadx_output\                                  # JADX 反编译输出
+├── base.apk                                      # 目标 PDD APK (25.9 MB)
+├── base_QQ.apk                                   # 目标 QQ APK (403 MB)
+├── jadx_output\                                  # PDD JADX 反编译输出
 │   ├── sources\                                  # 24,827 个 Java 源文件
 │   └── resources\resources\                      # 资源文件 + AndroidManifest.xml
+├── qq_jadx_output\                               # QQ JADX 反编译输出
+│   └── sources\                                  # 21,267 个 Java 源文件
+├── qq_extracted\                                 # QQ dex 提取产物
+│   ├── AndroidManifest.xml
+│   ├── classes.dex ~ classes5.dex                # 5 个 dex 文件 (46MB)
 ├── tools\                                        # 工具链与脚本
 │   ├── android-sdk\                              # Android SDK 35
 │   ├── jadx\                                     # JADX 1.5.6
@@ -31,27 +33,35 @@ F:\pdd逆向工程\
 │   ├── pdd_clipboard_hook.js                     # 剪贴板劫持专项 Hook 脚本 (JS)
 │   ├── deep_static_analysis.py                   # 深度静态分析脚本
 │   ├── run_jadx.py                               # JADX 反编译脚本
-│   ├── create_avd.py                             # AVD 创建脚本
-│   ├── start_emulator.py                         # 模拟器启动脚本
-│   └── wait_emulator.py                          # 模拟器等待脚本
+│   └── ...                                       # 其他工具脚本
 ├── .tzd\                                         # 任务日志
 │   └── log\
 └── 报告文档\
-    ├── ultimate_security_report.md               # 综合安全审计报告 (622 行)
+    ├── ultimate_security_report.md               # 综合安全审计报告
+    ├── PDD_behavior_perception_analysis.md        # 用户行为感知机制深度分析
+    ├── PDD_screenshot_evidence_chain.md           # 截图/相册监控证据链
+    ├── PDD_dynamic_security_testing_report.md     # 动态安全测试报告（含 QQ 逆向）
+    └── static_analysis_findings.txt               # 静态分析原始结果
     ├── PDD_behavior_perception_analysis.md        # 用户行为感知机制深度分析 (382 行)
     ├── PDD_screenshot_evidence_chain.md           # 截图/相册监控证据链 (718 行)
     ├── PDD_dynamic_security_testing_report.md     # 动态安全测试报告 (801 行)
     └── static_analysis_findings.txt               # 静态分析原始结果 (1037 行)
 ```
-
----
-
-## 报告导航
-
 | 报告 | 内容 | 适用场景 |
 |------|------|---------|
 | **[ultimate_security_report.md](ultimate_security_report.md)** | 全面的静态安全审计，涵盖权限、保活、截图、剪贴板、URL Scheme、WebView 等 | 了解 PDD 的整体安全风险 |
 | **[PDD_behavior_perception_analysis.md](PDD_behavior_perception_analysis.md)** | 聚焦"为什么点 QQ 聊天记录会触发 PDD 推送"，含 Binder 层劫持完整证据链 | 理解剪贴板劫持的技术原理 |
+| **[PDD_screenshot_evidence_chain.md](PDD_screenshot_evidence_chain.md)** | 截图/相册监控的完整证据链，含 MediaProjection、VirtualDisplay、ImageReader | 深入理解 PDD 的屏幕捕获能力 |
+| **[PDD_dynamic_security_testing_report.md](PDD_dynamic_security_testing_report.md)** | 动态安全测试方案 + **QQ 逆向分析**（修正了剪贴板劫持假设），含完整 Frida Hook 脚本 | 在真机上验证 PDD 的隐私侵犯行为 |
+| **[static_analysis_findings.txt](static_analysis_findings.txt)** | 31,246 个敏感模式匹配的原始结果 | 快速检索特定安全模式 |
+
+### 🔵 QQ 逆向分析（2026-07-17 新增）
+
+对 QQ APK (403MB) 进行了逆向分析，反编译 21,267 个 Java 文件，**关键发现**：
+
+- **QQ 生产版不写剪贴板**：`DefaultCopyDataUseCase` 仅在 `QLog.isDebugVersion()` 时执行 `setPrimaryClip`
+- **PandoraEx 监控框架**：QQ 内置的隐私 API 监控框架，包裹了全部敏感 API（剪贴板/相机/定位/设备标识/传感器等 11 类 130+ API）
+- **推翻剪贴板劫持假设**：PDD 获取 QQ 聊天内容最可能通过**腾讯广告生态 (GDT/AMS)** 数据共享，而非技术漏洞
 | **[PDD_screenshot_evidence_chain.md](PDD_screenshot_evidence_chain.md)** | 截图/相册监控的完整证据链，含 MediaProjection、VirtualDisplay、ImageReader | 深入理解 PDD 的屏幕捕获能力 |
 | **[PDD_dynamic_security_testing_report.md](PDD_dynamic_security_testing_report.md)** | 动态安全测试方案，含完整 Frida Hook 脚本和复现步骤 | 在真机上验证 PDD 的隐私侵犯行为 |
 | **[static_analysis_findings.txt](static_analysis_findings.txt)** | 31,246 个敏感模式匹配的原始结果 | 快速检索特定安全模式 |
